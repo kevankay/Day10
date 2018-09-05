@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="cyan">
+<h1> Registration Form</h1>
+<hr>
+<form action="register" method="post">
+  <label>Name</label>
+  <input type="text" name="Name" size="15"/>
+  <br><br>
+  <label>User Name</label>
+  <input type="text" name="user name" size="15"/>
+  <br><br>
+  <label></label>
+  <input type="password" name="password" size="15"/>
+  <br><br>
+  
+  <input type="submit" value="Register"/>
+  <input type="reset" value="Clear"/>
+  <br><br>
+     <a href="LogIn.html">Log in</a>
+  
+</form>
+
+</body>
+</html>
