@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=C\:\\Users\\kevankay\\Documents\\keerthana\\WebApplications\\HelloWorld\\.git;C\:\\Users\\kevankay\\Documents\\keerthana\\WebApplications\\LoginApp\\.git;
-GitRepositoriesView.GitDirectories.relative=HelloWorld\\.git;LoginApp\\.git;
+GitRepositoriesView.GitDirectories=C\:\\Users\\kevankay\\Documents\\keerthana\\WebApplications\\.git;C\:\\Users\\kevankay\\Documents\\keerthana\\WebApplications\\HelloWorld\\.git;C\:\\Users\\kevankay\\Documents\\keerthana\\WebApplications\\LoginApp\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;HelloWorld\\.git;LoginApp\\.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
