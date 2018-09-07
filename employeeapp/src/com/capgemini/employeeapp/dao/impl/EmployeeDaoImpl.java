@@ -9,11 +9,12 @@ import com.capgemini.employeeapp.model.Employee;
 public class EmployeeDaoImpl implements EmployeeDao {
 	
 	private List<Employee> employees = new ArrayList<>();
+	
 
 	@Override
 	public List<Employee> findAllEmployees() {
-		// TODO Auto-generated method stub
-		return null;
+		return employees;
+		
 	}
 
 	@Override
@@ -35,8 +36,8 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 	@Override
 	public boolean addEmployee(Employee employee) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return employees.add(employee);
 	}
 
 	@Override

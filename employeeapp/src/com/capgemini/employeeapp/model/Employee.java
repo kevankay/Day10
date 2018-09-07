@@ -2,7 +2,7 @@ package com.capgemini.employeeapp.model;
 
 public class Employee {
 	private int employeeId;
-	private String emplyeeName;
+	private String employeeName;
 	private double employeeSalary;
 	private String employeeDepartment;
 
@@ -11,10 +11,10 @@ public class Employee {
 		
 	}
 
-	public Employee(int employeeId, String emplyeeName, double employeeSalary, String employeeDepartment) {
+	public Employee(int employeeId, String employeeName, double employeeSalary, String employeeDepartment) {
 		super();
 		this.employeeId = employeeId;
-		this.emplyeeName = emplyeeName;
+		this.employeeName = employeeName;
 		this.employeeSalary = employeeSalary;
 		this.employeeDepartment = employeeDepartment;
 	}
@@ -27,12 +27,12 @@ public class Employee {
 		this.employeeId = employeeId;
 	}
 
-	public String getEmplyeeName() {
-		return emplyeeName;
+	public String getEmployeeName() {
+		return employeeName;
 	}
 
-	public void setEmplyeeName(String emplyeeName) {
-		this.emplyeeName = emplyeeName;
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
 	}
 
 	public double getEmployeeSalary() {
@@ -50,5 +50,7 @@ public class Employee {
 	public void setEmployeeDepartment(String employeeDepartment) {
 		this.employeeDepartment = employeeDepartment;
 	}
+	
+	
 
 }

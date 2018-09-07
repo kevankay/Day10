@@ -12,13 +12,13 @@
    <form action="addEmployee" method="post">
       <label>Employee ID: </label>
       <input type="number" name="empId" required/>
-      <br>
+      <br><br>
       <label>Employee Name: </label>
       <input type="text" name="empName" size="15"/>
-      <br>
+      <br><br>
       <label>Employee Salary: </label>
       <input type="number" name="empSalary" size="15"/>
-      <br>
+      <br><br>
       <label>Employee Department: </label>
       <select name="empDept" required>
           <option value="">--select--</option>
@@ -27,7 +27,7 @@
           <option value="ACCOUNTS"> ACCOUNTS</option>
           <option value="HR"> HR</option>
       </select>
-      <br>
+      <br><br>
       
       <input type="submit" value="Add Employee"/>
    
