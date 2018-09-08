@@ -18,12 +18,17 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	}
 
 	@Override
-	public Employee findemployeeById(int employeeId) {
-		
+	public Employee findEmployeeById(int employeeId) {
+		for (Employee employee : employees) {
+			if(employee.getEmployeeId()==employeeId)
+			{
+				return employee;
+			}
+		}
 		return null;
 	}
 
-	@Override
+
 	public boolean deleteEmployee(int employeeId) {
 		for(Employee employee : employees) {
 			if(employee.getEmployeeId() == employeeId) {
@@ -43,7 +48,17 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	@Override
 	public Employee updateEmployee(Employee employee) {
 		// TODO Auto-generated method stub
+		for (Employee employeeIter : employees) {
+			if(employeeIter.getEmployeeId()==employee.getEmployeeId())
+					{
+						employeeIter.setEmployeeDepartment(employee.getEmployeeDepartment());
+						employeeIter.setEmployeeName(employee.getEmployeeName());
+						employeeIter.setEmployeeSalary(employee.getEmployeeSalary());
+					}
+		}
 		return null;
 	}
 
+		
+	
 }

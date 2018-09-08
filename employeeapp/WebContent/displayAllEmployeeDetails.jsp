@@ -27,8 +27,8 @@
                    <td>${employee.employeeName}</td>
                    <td>${employee.employeeSalary}</td>
                    <td>${employee.employeeDepartment}</td>
-                   <td><a href="">Edit</a></td>
-                   <td><a href="deleteEmployee.jsp">Delete</a></td>
+                   <td><a href="updateEmployee?empId=${employee.employeeId}">Edit</a></td>
+                   <td><a href = "deleteEmployee?empId=${employee.employeeId}">Delete</a></td>
                    
                </tr>
          
