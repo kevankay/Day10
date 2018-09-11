@@ -1,49 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
-    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>update employee details</title>
+<title>Update Employee Details</title>
 </head>
-<body bgcolor="lavender">
-	<h1>Add new employee</h1>
-	<hr>
-	<form action="updateEmployee" method="post">
-	
-	
-	<label>Employee ID:</label>
-	<input type="number" name="empId" value="${employeeDao.employeeId}" readonly required/>
-	<br>
-	
-	
-	<label>Employee Name:</label>
-	<input type="text" name="empName" value="${employeeDao.employeeName}"required/>
-	<br>
-	
-	
-	
-	
-	<label>Employee Salary:</label>
-	<input type="number" name="empSalary" value="${employeeDao.employeeSalary}"required/>
-	<br>
-	
-	
-	<label>Employee Department:</label>
-	<select  name="empDept" value="${employeeDao.employeeDepartment}"  required>
-	
-          <option value="IT"> IT</option>
-          <option value="ADMIN"> ADMIN</option>
-          <option value="ACCOUNTS"> ACCOUNTS</option>
-          <option value="HR"> HR</option>
-	
-	</select>
-	<br>
-	
-	<input type="submit" value="SUBMIT">
-	
+<body bgcolor=Bisque style="text-align:center">
+<h1>Update the details..</h1>
+<hr>
+<br><br>
+<form action="updateEmployee.do" method="post">
+	<br><br><br>
+		<label> Employee Id: </label>
+		<input type="text" value="${employee.employeeId }" name="empId" readonly>
+		<br> <br>
+		<label>Employee Name: </label> 
+		<input type="text" name="empName" placeholder="${employee.employeeName}" size="15" required /> 
+		<br> <br>
+		<label> Employee Salary: </label> 
+		<input type="number" name="empSalary" placeholder="${employee.employeeSalary}"size="15" required /> 
+		<br> <br>
+		<label>Employee Department: </label> 
+		<select name="empDept" placeholder="${employee.employeeDepartment}" required>
+		<option value="">--Select--</option>
+			<option value="IT">IT</option>
+			<option value="HR">HR</option>
+			<option value="ADMIN">ADMIN</option>
+			<option value="ACCOUNTS">ACCOUNTS</option>
+		</select>
+		<br><br><br>
+		<input type="submit" value="Update"/>
 	</form>
 </body>
 </html>

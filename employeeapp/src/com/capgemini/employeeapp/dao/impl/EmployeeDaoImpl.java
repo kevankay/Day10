@@ -7,31 +7,33 @@ import com.capgemini.employeeapp.dao.EmployeeDao;
 import com.capgemini.employeeapp.model.Employee;
 
 public class EmployeeDaoImpl implements EmployeeDao {
-	
+
 	private List<Employee> employees = new ArrayList<>();
-	
 
 	@Override
 	public List<Employee> findAllEmployees() {
 		return employees;
-		
 	}
 
 	@Override
-	public Employee findEmployeeById(int employeeId) {
+	public Employee findEmployeeByID(int employeeId) {
 		for (Employee employee : employees) {
-			if(employee.getEmployeeId()==employeeId)
-			{
+			if (employee.getEmployeeId() == employeeId) {
 				return employee;
 			}
 		}
 		return null;
 	}
 
+	@Override
+	public String toString() {
+		return "EmployeeDaoImpl [employees=" + employees + "]";
+	}
 
+	@Override
 	public boolean deleteEmployee(int employeeId) {
-		for(Employee employee : employees) {
-			if(employee.getEmployeeId() == employeeId) {
+		for (Employee employee : employees) {
+			if (employee.getEmployeeId() == employeeId) {
 				employees.remove(employee);
 				return true;
 			}
@@ -41,24 +43,25 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 	@Override
 	public boolean addEmployee(Employee employee) {
-		
+//		for (Employee emp : employees) {
+//			if (emp.getEmployeeId() == employee.getEmployeeId()) {
+//				return false;
+//			}
+//		}
 		return employees.add(employee);
 	}
 
 	@Override
 	public Employee updateEmployee(Employee employee) {
-		// TODO Auto-generated method stub
-		for (Employee employeeIter : employees) {
-			if(employeeIter.getEmployeeId()==employee.getEmployeeId())
-					{
-						employeeIter.setEmployeeDepartment(employee.getEmployeeDepartment());
-						employeeIter.setEmployeeName(employee.getEmployeeName());
-						employeeIter.setEmployeeSalary(employee.getEmployeeSalary());
-					}
+		for (Employee emp : employees) {
+			if (emp.getEmployeeId() == employee.getEmployeeId()) {
+				emp.setEmployeeName(employee.getEmployeeName());
+				emp.setEmployeeSalary(employee.getEmployeeSalary());
+				emp.setEmployeeDepartment(employee.getEmployeeDepartment());
+			}
+			return emp;
 		}
 		return null;
 	}
 
-		
-	
 }

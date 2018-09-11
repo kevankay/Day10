@@ -4,11 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Error Page</title>
+<title>Error Page ...</title>
 </head>
 <body>
-   
-   <h1>Something went wrong.</h1>
-
+<h1>Something Went Wrong!!!!!</h1>
 </body>
 </html>

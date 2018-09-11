@@ -10,51 +10,40 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import com.capgemini.employeeapp.dao.EmployeeDao;
-import com.capgemini.employeeapp.dao.impl.EmployeeDaoImpl;
-import com.capgemini.employeeapp.model.Employee;
 
-
-@WebServlet("/deleteEmployee")
+@WebServlet("/deleteEmployee.do")
 public class DeleteEmployeeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private EmployeeDao employeeDao;
 	private ServletContext context;
-       
-    
+	private EmployeeDao employeeDao;
+	
     public DeleteEmployeeController() {
         super();
-        employeeDao = new EmployeeDaoImpl();
-        
+       
     }
-    
+
     @Override
     public void init(ServletConfig config) throws ServletException {
     	context = config.getServletContext();
     }
-
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-                response.setContentType("text/html");
-                
-                int empId = Integer.parseInt(request.getParameter("empId"));
-                RequestDispatcher dispatcher = null;
-        		employeeDao =(EmployeeDao) context.getAttribute("employeeDao");
-        		
-        		/*context.setAttribute("employeeDao", employeeDao);*/
-
 		
-		    
-		    
-		    if(employeeDao.deleteEmployee(empId)) {
-				
-				/*response.sendRedirect("deletedSuccessfully.jsp");*/
-		    	response.sendRedirect("getAllEmployees");
-			}
-			else {
-				dispatcher = request.getRequestDispatcher("error.jsp");
-				dispatcher.forward(request, response);
-			}
-}
+		
+		response.setContentType("text/html");
+		RequestDispatcher dispatcher = null;
+		 
+		String id=request.getParameter("Id");
+		
+		employeeDao = (EmployeeDao) context.getAttribute("employeeDao");
+		System.out.println(id);
+		 
+		if (employeeDao.deleteEmployee(Integer.parseInt(id))){
+			response.sendRedirect("getAllEmployees.do");			
+		} else {
+			dispatcher = request.getRequestDispatcher("error.jsp");
+			dispatcher.forward(request, response);
+		}
+		
+	}
 }

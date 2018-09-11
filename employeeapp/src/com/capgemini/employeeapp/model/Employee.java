@@ -8,7 +8,6 @@ public class Employee {
 
 	public Employee() {
 		super();
-		
 	}
 
 	public Employee(int employeeId, String employeeName, double employeeSalary, String employeeDepartment) {
@@ -50,7 +49,5 @@ public class Employee {
 	public void setEmployeeDepartment(String employeeDepartment) {
 		this.employeeDepartment = employeeDepartment;
 	}
-	
-	
 
 }

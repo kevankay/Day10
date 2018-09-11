@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -34,10 +35,15 @@ public class HelloWorldServlet extends HttpServlet {
     	System.out.println("doGet() method is called.");
 		response.setContentType("text/html");
 		
-		PrintWriter out = response.getWriter();
-		out.println("<h1>Hello World</h1>");
-		out.close();
+    
+    PrintWriter out = response.getWriter();
+	out.println("<h1>Hello World</h1>");
+	Cookie[] cookies  = request.getCookies();
+	for (Cookie cookie : cookies) {
+		out.println("<h1>" + cookie.getName() + " - " + cookie.getValue() + "</h1>");
 	}
+	out.close();		
+}
     
     @Override
     public void destroy() {
