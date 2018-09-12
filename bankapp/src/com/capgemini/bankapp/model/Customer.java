@@ -11,7 +11,6 @@ public class Customer {
 	
 	public Customer() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public Customer(long customerId, String customerName, String password, String emailId, String address, String dob,
 			String account) {
@@ -71,6 +70,5 @@ public class Customer {
 		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", password=" + password
 				+ ", emailId=" + emailId + ", address=" + address + ", dob=" + dob + ", account=" + account + "]";
 	}
-	
 	
 }

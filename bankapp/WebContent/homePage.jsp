@@ -4,18 +4,21 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>ICICI BANK</title>
+<title>Home page</title>
 </head>
-<body bgcolor="cyan" style="text-align:center">
-       <h1> Welcome to ICICI Bank</h1>
+<body bgcolor ="Bisque" style="text-align:center">
+  
+   <img src = "images/icicilogo.jpg" width="150" height="80" align="left"/>
+   <body style="text-align:right">
+   <h1>Welcome</h1>
+   </body>
+ <%@ include file = "header1.jsp" %>
+      
        
-       <hr>
+        
+       <%@ include file = "footer.jsp" %>
 
-		<a href="">Home</a>
-				<a href="">Edit Profile</a><br><br>
-		<a href="">Login</a><br><br>
-		<a href="">Transfer money</a><br><br>
-		<a href="">Balance Enquiry</a><br><br>
-		
+
+
 </body>
 </html>
