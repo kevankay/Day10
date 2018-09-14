@@ -13,7 +13,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	@Override
 	public Customer authenticate(Customer customer) {
 		for (Customer c : customers) {
-			if (c.getCustomerId()==customer.getCustomerId()) {
+			if (c.getCustomerEmail().equals(customer.getCustomerEmail())) {
 				System.out.println(c);
 				if (c.getCustomerPassword().equals(customer.getCustomerPassword())) {
 					return c;
@@ -27,13 +27,12 @@ public class CustomerDaoImpl implements CustomerDao {
 	public Customer updateProfile(Customer customer) {
 	
 		for (Customer c : customers) {
-			if (c.getCustomerId()==customer.getCustomerId()) {
+			if (c.getCustomerEmail().equals(customer.getCustomerEmail())) {
 				if (c.getCustomerPassword().equals(customer.getCustomerPassword())) {
 					c.setCustomerName(customer.getCustomerName());
-					c.setCustomerId(customer.getCustomerId());
-					c.setCustomerEmailId(customer.getCustomerEmailId());
+					c.setCustomerEmail(customer.getCustomerEmail());
 					c.setCustomerAddress(customer.getCustomerAddress());
-					c.setCustomerDob(customer.getCustomerDob());
+					c.setCustomerDateOfBirth(customer.getCustomerDateOfBirth());
 					return c;
 				}
 			}
@@ -45,7 +44,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	public boolean updatePassword(Customer customer, String oldPassword, String newPassword) {
 		
 		for (Customer c : customers) {
-			if (c.getCustomerId()==customer.getCustomerId()) {
+			if (c.getCustomerEmail().equals(customer.getCustomerEmail())) {
 				if (c.getCustomerPassword() == oldPassword) {
 					c.setCustomerPassword(newPassword);
 					return true;

@@ -38,13 +38,13 @@ public class BankAccountServiceImpl implements BankAccountService {
 
 	@Override
 	public double deposit(long accountId, double amount) {
-		double newBalance;
+		double newBalance1;
 		for (BankAccount bankAccount : bankAccounts) {
-			newBalance = bankAccount.getAccountBalance() + amount;
-			if (bankAccountDao.updateBalance(accountId, newBalance))
-				bankAccount.setAccountBalance(newBalance);
+			newBalance1 = bankAccount.getAccountBalance() + amount;
+			if (bankAccountDao.updateBalance(accountId, newBalance1))
+				bankAccount.setAccountBalance(newBalance1);
 			DummyDataBase.setBankAccounts(bankAccounts);
-			return newBalance;
+			return newBalance1;
 		}
 		return 0;
 	}

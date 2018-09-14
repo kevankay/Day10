@@ -1,4 +1,4 @@
-package com.capgemini.bankapp.controllers;
+package com.capgemini.bankapp.controller;
 
 import java.io.IOException;
 
@@ -15,12 +15,12 @@ import com.capgemini.bankapp.model.BankAccount;
 import com.capgemini.bankapp.service.BankAccountService;
 import com.capgemini.bankapp.service.impl.BankAccountServiceImpl;
 
-@WebServlet("/fundTransfer")
-public class FundTransferController extends HttpServlet {
+@WebServlet("/transferAmount")
+public class TransferAmountController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private BankAccountService bankAccountService;
     
-    public FundTransferController() {
+    public TransferAmountController() {
         super();
         bankAccountService = new BankAccountServiceImpl();
     }
@@ -39,7 +39,7 @@ public class FundTransferController extends HttpServlet {
 			if(bankAccountService.fundTransfer(fromAccId, toAccId, amount))
 			{
 				
-				dispatcher = request.getRequestDispatcher("transferSuccessful.jsp");
+				dispatcher = request.getRequestDispatcher("successfullTransfer.jsp");
 				dispatcher.forward(request, response);
 			} else {
 				dispatcher = request.getRequestDispatcher("error.jsp");

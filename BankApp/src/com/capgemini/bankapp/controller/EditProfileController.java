@@ -1,4 +1,4 @@
-package com.capgemini.bankapp.controllers;
+package com.capgemini.bankapp.controller;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -18,12 +18,12 @@ import com.capgemini.bankapp.service.CustomerService;
 import com.capgemini.bankapp.service.impl.CustomerServiceImpl;
 
 
-@WebServlet("/updateProfile")
-public class UpdateProfileController extends HttpServlet {
+@WebServlet("/editProfile")
+public class EditProfileController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private CustomerService customerService;
     
-    public UpdateProfileController() {
+    public EditProfileController() {
         super();
         customerService = new CustomerServiceImpl();
        
@@ -38,14 +38,14 @@ public class UpdateProfileController extends HttpServlet {
 		String customerPassword = request.getParameter("customerPassword");
 		String customerEmail = request.getParameter("customerEmail");
 		String customerAddress = request.getParameter("customerAddress");
-		String customerDob = request.getParameter("customerDob");
+		String customerDob = request.getParameter("customerDateOfBirth");
 
 		LocalDate dob = LocalDate.parse(customerDob);
 		RequestDispatcher dispatcher = null;
 		Customer customer = new Customer(customerId,customerName,customerPassword,customerEmail,customerAddress,dob,null);
 		customerService.updateProfile(customer);
 		if (customer.getCustomerId() != 0) {
-			dispatcher = request.getRequestDispatcher("updatedSuccessfully.jsp");
+			dispatcher = request.getRequestDispatcher("successEdit.jsp");
 			dispatcher.forward(request, response);
 		} else {
 			dispatcher = request.getRequestDispatcher("error.jsp");

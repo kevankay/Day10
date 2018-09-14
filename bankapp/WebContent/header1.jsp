@@ -29,13 +29,13 @@
      <a href="homePage.jsp">Home</a>
         
          &emsp;&emsp;&emsp; 
-        <a href="updateProfile.jsp">Edit Profile</a>
+        <a href="editProfile.jsp">Edit Profile</a>
        
         &emsp;&emsp;&emsp; 
-		<a href="fundTransfer.jsp">Transfer money</a>
+		<a href="transferAmount.jsp">Transfer money</a>
 		
 		&emsp;&emsp;&emsp; 
-		<a href="checkBalance">Balance Enquiry</a>
+		<a href="checkBalance.jsp">Balance Enquiry</a>
 		&emsp;&emsp;&emsp; 
 		
 		<a href="welcome.jsp">Logout</a>

@@ -5,9 +5,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<body bgcolor="Bisque" style="text-align:center" >
+<img src = "images/icicilogo.jpg" width="150" height="100" align="left"/>
+<br><br><br><br><br>
+
 <%@ include file="header1.jsp" %>
 </head>
-<body bgclor="Bisque" style="text-align:center" >
+
 <br><br><br><br><br>
 <h1>You have updated your details successfully!!</h1>
 </body>

@@ -8,12 +8,12 @@
 <body bgcolor ="Bisque" style="text-align:center">
   
    <img src = "images/icicilogo.jpg" width="150" height="80" align="left"/>
-   <br><br><br>
+   <br><br><br><br><br>
 
 <%@ include file="header1.jsp" %>
 </head>
 <body style="text-align:center" >
 <br><br><br><br><br>
-<h4>The transaction is successful !!</h4>
+<h1>The transaction is successful !!</h1>
 </body>
 </html>

@@ -10,7 +10,7 @@
 <img src = "images/icicilogo.jpg" width="150" height="100" align="left"/>
 <br><br><br>
 
-<form action="fundTransfer" method="post">
+<form action="transferAmount" method="post">
 	<br><br><br>
 	<h2>Transfer Fund</h2>
 		<label> From Account Number: </label>
@@ -33,4 +33,3 @@
 
      </body>
 </html>
-

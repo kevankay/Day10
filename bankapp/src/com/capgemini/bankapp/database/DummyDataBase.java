@@ -23,9 +23,9 @@ public class DummyDataBase {
 		bankAccounts.add(account2);
 		bankAccounts.add(account3);
 		
-		Customer customer1 = new Customer(1,"Shiny","shiny1","shiny@gmail.com","Narasaraopet",LocalDate.of(1997,3,12),account1);
-		Customer customer2 = new Customer(2,"Sam","sam2","sam@gmail.com","Mumbai",LocalDate.of(1954,3,12),account2);
-		Customer customer3 = new Customer(3,"George","george3","george@gmail.com","Hyderabad",LocalDate.of(1930,3,12),account3);
+		Customer customer1 = new Customer(1,"Tom","t1","tom@gmail.com","ABC",LocalDate.of(1880,3,12),account1);
+		Customer customer2 = new Customer(2,"Sam","s1","sam@gmail.com","AB",LocalDate.of(1890,3,12),account2);
+		Customer customer3 = new Customer(3,"Pam","p1","pam@gmail.com","AC",LocalDate.of(1860,3,12),account3);
 		
 		customers.add(customer1);
 		customers.add(customer2);

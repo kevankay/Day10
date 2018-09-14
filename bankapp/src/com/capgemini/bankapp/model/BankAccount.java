@@ -1,12 +1,12 @@
 package com.capgemini.bankapp.model;
 
 public class BankAccount {
+
 	private long accountId;
 	private String accountType;
 	private double accountBalance;
 	public BankAccount() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public BankAccount(long accountId, String accountType, double accountBalance) {
 		super();
@@ -38,4 +38,6 @@ public class BankAccount {
 				+ accountBalance + "]";
 	}
 	
+	
+
 }
