@@ -1,27 +1,29 @@
 package com.capgemini.bankapp.model;
 
+import java.time.LocalDate;
+
 public class Customer {
 	private long customerId;
 	private String customerName;
-	private String password;
-	private String emailId;
-	private String address;
-	private String dob;
-	private String account ;
-	
+	private String customerPassword;
+	private String customerEmailId;
+	private String customerAddress;
+	private LocalDate customerDob;
+	private BankAccount customerAccount ;
 	public Customer() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
-	public Customer(long customerId, String customerName, String password, String emailId, String address, String dob,
-			String account) {
+	public Customer(long customerId, String customerName, String customerPassword, String customerEmailId,
+			String customerAddress, LocalDate customerDob, BankAccount customerAccount) {
 		super();
 		this.customerId = customerId;
 		this.customerName = customerName;
-		this.password = password;
-		this.emailId = emailId;
-		this.address = address;
-		this.dob = dob;
-		this.account = account;
+		this.customerPassword = customerPassword;
+		this.customerEmailId = customerEmailId;
+		this.customerAddress = customerAddress;
+		this.customerDob = customerDob;
+		this.customerAccount = customerAccount;
 	}
 	public long getCustomerId() {
 		return customerId;
@@ -35,40 +37,41 @@ public class Customer {
 	public void setCustomerName(String customerName) {
 		this.customerName = customerName;
 	}
-	public String getPassword() {
-		return password;
+	public String getCustomerPassword() {
+		return customerPassword;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setCustomerPassword(String customerPassword) {
+		this.customerPassword = customerPassword;
 	}
-	public String getEmailId() {
-		return emailId;
+	public String getCustomerEmailId() {
+		return customerEmailId;
 	}
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public void setCustomerEmailId(String customerEmailId) {
+		this.customerEmailId = customerEmailId;
 	}
-	public String getAddress() {
-		return address;
+	public String getCustomerAddress() {
+		return customerAddress;
 	}
-	public void setAddress(String address) {
-		this.address = address;
+	public void setCustomerAddress(String customerAddress) {
+		this.customerAddress = customerAddress;
 	}
-	public String getDob() {
-		return dob;
+	public LocalDate getCustomerDob() {
+		return customerDob;
 	}
-	public void setDob(String dob) {
-		this.dob = dob;
+	public void setCustomerDob(LocalDate customerDob) {
+		this.customerDob = customerDob;
 	}
-	public String getAccount() {
-		return account;
+	public BankAccount getCustomerAccount() {
+		return customerAccount;
 	}
-	public void setAccount(String account) {
-		this.account = account;
+	public void setCustomerAccount(BankAccount customerAccount) {
+		this.customerAccount = customerAccount;
 	}
 	@Override
 	public String toString() {
-		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", password=" + password
-				+ ", emailId=" + emailId + ", address=" + address + ", dob=" + dob + ", account=" + account + "]";
+		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerPassword="
+				+ customerPassword + ", customerEmailId=" + customerEmailId + ", customerAddress=" + customerAddress
+				+ ", customerDob=" + customerDob + ", customerAccount=" + customerAccount + "]";
 	}
 	
 }

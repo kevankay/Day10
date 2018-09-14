@@ -14,16 +14,23 @@
 	<br><br><br>
 	<h2>Transfer Fund</h2>
 		<label> From Account Number: </label>
-		<input type="number" value="${customer.accountId}" name="fromAcc" readonly>
+		
+		<input type="text" value="${customer.customerAccount.accountId}" name="fromAccId" readonly/>
 		<br> <br>
-		<label> Enter amount : </label>
-		<input type="number"  name="amount">
-		<br> <br>
+		
 		<label> To Account Number: </label>
-		<input type="number" name="toAcc">
+		
+		<input type="text" name="toAccId" required/>
 		<br> <br>
+		
+		<label> Enter amount : </label>
+		<input type="number"  name="amount" min=1000 max=10000 required/>
+		<br> <br>
+		
+		<input type="reset" value="Clear"/>
+	   <input type="submit" value="Submit"/>
+	   <br>
 
-        <input type="submit" name="Tranfer Fund"/>
-
-</body>
+     </body>
 </html>
+
